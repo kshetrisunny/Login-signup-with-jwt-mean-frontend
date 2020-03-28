@@ -1,0 +1,38 @@
+<div class="row justify-content-center">
+    <div class="col-md-11 col-xs-12">
+        <div class="card shadow p-4 mb-5 bg-white rounded">
+            <div class="col-md-12 col-xs-12">
+                <table *ngIf="userDetails" class="table-fill">
+                    <thead>
+                        <tr>
+                            <th colspan="2" class="text-left"><strong>User Profile</strong></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>First Name</td>
+                            <td>{{userDetails.fullName.split(' ')[0]}}</td>
+                        </tr>
+                        <!-- <tr>
+                            <td>Last Name</td>
+                            <td>{{userDetails.fullName.split(' ')[1]}}</td>
+                        </tr> -->
+                        <tr>
+                            <td>Email</td>
+                            <td>{{userDetails.email}}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="text-center">
+                                <div class="col-md-12 text-right" style="margin-top: 10px;">
+                                    <input type="button" (click)="onLogout()" value="Logout" />
+                                </div>
+                                
+                            </td>
+                        </tr>
+                    </tbody>
+                  </table>
+                  
+            </div>
+        </div>
+    </div>
+</div>
